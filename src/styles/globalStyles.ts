@@ -27,6 +27,7 @@ body {
     font-family: 'Heebo', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background);
 }
 
 :root {
@@ -47,6 +48,7 @@ body {
   --earth: #0FDD86;
   --saturn: #554AD7;
   --text: #FFFFFF;
+  --background: #04032C;
 
 --font-display: 800 ${pixelToRem(62)}/ ${pixelToRem(96)} "Heebo", sans-serif;
 
