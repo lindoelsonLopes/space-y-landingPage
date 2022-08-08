@@ -8,5 +8,5 @@ Projeto Figma desenvolvido por Jonas Milan - Rocketseat
  
  Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
- -[ ReactJs ] (https://reactjs.org/)
- -[ Styled Components ] (https://styled-components.com/)
+ - [ ReactJs ] (https://reactjs.org/)
+ - [ Styled Components ] (https://styled-components.com/)
