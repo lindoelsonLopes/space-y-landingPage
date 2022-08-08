@@ -1,34 +1,32 @@
 import { createGlobalStyle } from "styled-components";
 
-function pixelToRem(...values: number[]) {
-  return values
-    .reduce((acc, current) => (acc += current / 16 +`rem `), "")
-    .trim();
-}
+import pixelToRem from '../utils/pxToRem';
 
 export const GlobalStyles = createGlobalStyle`
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   @media(max-width: 1440px) {
-    // font-size: 93.75%;
+
   }
+
   @media(max-width: 375px) {
-    // font-size: 87.5%;
+
   }
 }
 
 body {
     font-family: 'Heebo', sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     background-color: var(--background);
 }
+
+/* Colors  */
 
 :root {
   --space: #0B1E8A;  
@@ -50,6 +48,9 @@ body {
   --text: #FFFFFF;
   --background: #04032C;
 
+
+  /* Fonts  */
+
 --font-display: 800 ${pixelToRem(62)}/ ${pixelToRem(96)} "Heebo", sans-serif;
 
 --font-heading-1: 700 ${pixelToRem(32)}/ ${pixelToRem(48)} "Heebo", sans-serif;
@@ -58,7 +59,7 @@ body {
 
 --font-heading-3: 400 ${pixelToRem(20)}/ ${pixelToRem(24)} "Heebo", sans-serif;
 
---text-4: 500 ${pixelToRem(18)}/ ${pixelToRem(48)} "Heebo", sans-serif;
+--text-4: 500 ${pixelToRem(18)}/ ${pixelToRem(32)} "Heebo", sans-serif;
 
 --text-3: 500 ${pixelToRem(18)}/ ${pixelToRem(24)} "Heebo", sans-serif;
 

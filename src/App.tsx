@@ -1,17 +1,20 @@
-import React from 'react';
 import { GlobalStyles } from './styles/globalStyles';
-import { Header, Logo, Main, FirstTitle, SecondTitle, Subtitle } from './styles/styles';
+import {
+  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration
+} from './styles/styles';
 import Button from './components/Button';
 
 function App() {
   return (
-    <>
+<>
+  <Container>
       <GlobalStyles />
 
+
       <Header>
-        <Logo>
-          <img src='/images/logo.svg' alt="" />
-        </Logo>
+
+        <Logo />
+        
       </Header>
 
       <Main>
@@ -21,18 +24,22 @@ function App() {
         </FirstTitle>
 
         <SecondTitle>
-          Sua Jornada para Marte começa aqui.
+          Sua Jornada para Marte começa aqui<span>.</span>
         </SecondTitle>
 
         <Subtitle>
           A primeira viagem para Marte estará disponível apartir do dia 12/03/2028. Inscreva-se em nossa lista de espera.
         </Subtitle>
 
+        <AstrounautIllustration />
+
       </Main>
 
       <Button text="Inscreva-se agora" />
 
-    </>
+
+  </Container>
+</>
   );
 }
 
