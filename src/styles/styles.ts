@@ -5,9 +5,7 @@ import pixelToRem from '../utils/pxToRem';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: ${pixelToRem(24, 112, 50)};
-  width: 100vw;
-  height: 100vh; 
+  margin: ${pixelToRem(24, 112, 50)};   
 `;
 
 export const Header = styled.div`
@@ -59,3 +57,17 @@ export const AstrounautIllustration = styled.image`
   right: 0;
   top: ${pixelToRem(10)};  
 `;
+
+export const DivButton = styled.div`
+  width: ${pixelToRem(264)};
+  padding-top: ${pixelToRem(32)};
+`;
+
+export const DivIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: ${pixelToRem(1440)};
+  align-items: center;
+  
+`;
+
