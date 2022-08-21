@@ -1,16 +1,20 @@
 import { GlobalStyles } from './styles/globalStyles';
+
 import {
-  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ContainerAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars
+  Container, Header, Logo, Main, FirstTitle, SecondTitle, Subtitle, AstrounautIllustration, DivButton, DivIcons, SectionAbout, ContainerAbout, ImageMars, DivAboutMars, SecondSubTitle, TextMars, GalleryContent, DivLogo, DivLogoSpaceY, TextLogo, TextSubscribe
 } from './styles/styles';
+
+import { ArrowLeft, ArrowRight } from './components/Gallery/styles';
 
 import Button from './components/Button';
 import Icon from './components/Icon';
+import Gallery from './components/Gallery';
 import pixelToRem from './utils/pxToRem';
 
 function App() {
   return (
 <>
-  <Container flex='column'margin={pixelToRem(24, 112, 50)}>
+  <Container flex='column' margin={pixelToRem(24, 112, 50)}>
       <GlobalStyles />
 
 
@@ -44,17 +48,17 @@ function App() {
       </Main>
       
       <DivIcons
-        // whileInView='visible'
-        // initial='initial'
-        // viewport={{ once: true }}
-        // variants={{
-        //   initial: { opacity: 0, y: 10 },
-        //   visible: {
-        //     opacity: 1,
-        //     y: 0,
-        //     transition: { duration: 1, delay: 0.3 },
-        //   },
-        // }}
+        whileInView='visible'
+        initial='initial'
+        viewport={{ once: true }}
+        variants={{
+          initial: { opacity: 0, y: 10 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 0.3 },
+          },
+        }}
         >
           <Icon src='/images/icon-rocket.svg' txt='Foguetes com a mais alta tecnologia e conforto.' alt='Rocket' />
 
@@ -71,13 +75,37 @@ function App() {
     flex='column'
   >
 
-    <Container width='100%' >
+    <Container width='100%'>
 
-      <ContainerAbout width='100%' alignItems='center' justifyContent='center'>
+      <ContainerAbout width="100%" alignItems="center" justifyContent="center">
 
-        <ImageMars />
+        <ImageMars
+          whileInView='visible'
+          initial="initial"
+          viewport={{ once: true }}
+          variants={{
+            initial: { opacity: 0, y: 10 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, delay: 0.3 },
+           },
+         }}
+        />
 
-        <DivAboutMars>
+        <DivAboutMars
+          whileInView='visible'
+          initial="initial"
+          viewport={{ once: true }}
+          variants={{
+            initial: { opacity: 0, x: 60 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, delay: 0.5 },
+          },
+        }}
+          >
 
           <FirstTitle>Por que Marte?</FirstTitle>
 
@@ -93,7 +121,51 @@ function App() {
 
     </Container>
 
+    <GalleryContent>
 
+      <DivLogo
+        whileInView='visible'
+        initial="initial"
+        viewport={{ once: true }}
+        variants={{
+          initial: { opacity: 0, x: 60 },
+          visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, delay: 1 },
+        },
+      }}
+    >
+
+        <DivLogoSpaceY>
+          <Logo />
+        </DivLogoSpaceY>
+
+        <TextLogo>O caminho para tornar a humanidade multiplanetária<span>.</span></TextLogo>
+
+        <TextSubscribe
+          whileInView='visible'
+          initial="initial"
+          viewport={{ once: true }}
+          variants={{
+            initial: { opacity: 0, y: 100 },
+            visible: {
+              opacity: 1,
+              y: -20,
+              transition: { duration: 1, delay: 1 },
+          },
+        }}
+      >
+          Inscreva-se agora
+        </TextSubscribe>        
+
+      </DivLogo>
+
+      <ArrowLeft />
+      <Gallery />
+      <ArrowRight />
+
+    </GalleryContent>
 
   </SectionAbout>
 </>
