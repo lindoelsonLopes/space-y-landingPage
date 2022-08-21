@@ -47,6 +47,8 @@ body {
   --saturn: #554AD7;
   --text: #FFFFFF;
   --background: #04032C;
+  --background-section: linear-gradient(180deg, #040327 0%, #0D0E13 24.49%);
+  --background-form: #0E0D40;
 
 
   /* Fonts  */

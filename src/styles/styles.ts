@@ -100,9 +100,8 @@ export const DivIcons = styled(motion.div)`
 
 export const SectionAbout = styled.div<GalleryFlexContainerProps>`
   display: flex;
-  justify-content: center;
-  background: url('/images/stars.png') no-repeat;
-  background-size: cover;
+  justify-content: center;  
+  background: url('/images/Starts.svg'), var(--background-section);
   flex-direction: ${(props) => props.flex};  
 `;
 
